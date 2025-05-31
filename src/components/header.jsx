@@ -7,8 +7,8 @@ export default function Header() {
         <nav className = "header-container">
             <div>
                 <h1 className="header-title" onClick={() => window.location.href = "/movie-calendar/"}>
-                    Box Office Calendar
-                </h1>
+    Box Office Calendar
+</h1>
             </div>
 
             <div className = "header-links">
