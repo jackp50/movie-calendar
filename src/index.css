@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'western-font'; 
+  src: url('/fonts/BroncoPersonalUse.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #003049;
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: "western-font", 'Times New Roman', Times, serif;
+}
+
+.header-container {
+  /* Header items side by side */
+  display: flex;
+  /*  Space between the two header items*/
+  justify-content:space-around;
+  /* Centers the items vertically in the container */
+  align-items: center;
+  background-color: #fdf0d5;
+  height: 100px;
+  margin-bottom: 40px;
+  color: black;
+  font-size: 30px;
+}
+
+.header-button {
+  margin-left: 10px;
+  background-color: #780000;
+  color: #fdf0d5;
+  /* Removes default button border */
+  border: none;
+  /* Adds padding around letters in button */
+  padding: 12px 24px; 
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  /* hover effect transition */
+  transition: all 0.3s ease-in-out;
+}
+
+.header-button:hover {
+  background-color: #a30000;
+  transform: scale(1.05);
+}
+
+.movie-list-container {
+  /* Makes the movie items side by side */
+  display: flex;
+  /* Keeps items in container  */
+  flex-wrap: wrap;
+  /*  Even spacing between items*/
+  justify-content: space-evenly;
+  /* Space between items */
+  gap: 15px;
+  /* Container max width, keeps only 4 posters in each row */
+  max-width: 1000px;
+  /* all margins are auto so centered */
+  margin: auto;
+  /* get away from the choose a year input */
+  margin-top: 35px;
+}
+
+.movie-item {
+  /* Position relative to the rank badges */
+  position: relative;
+  border-radius: 10px;
+  /* width of movie item */
+  width: 20%; 
+  /* max-width they can be */
+  max-width: 200px;
+  border: 1px solid #fdf0d5;
+}
+
+
+.movie-item img {
+  /* width of image inside movie item */
+  width: 100%;
+  height: 100%; 
+  /* movie item images have rounded corners */
+  border-radius: 10px;
+  /* make the cursor change when hovered */
+  cursor: pointer;
+}
+
+.movie-item img:hover {
+  /* makes image bigger */
+  transform: scale(1.05);
+  /* Makes scale change smoother */
+  transition: transform 0.3s ease-in-out;
+  /* adds a glow when hovered */
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+.modal {
+  /* makes the placement on top of the screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* centers modal */
+  width: 100vw;
+  height: 100vh;
+  /* darkens the background when modal is showing */
+  background: rgba(0, 0, 0, 0.7);
+  /* flexes items in modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.modal-content {
+  background: bisque;
+  padding: 30px;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  color: black;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#year-select {
+  width: 75px; 
+  font-size: 15px;
+  border-radius: 30px; 
+  border: none;
+  padding: 4px 6px; 
+  background-color: #fdf0d5; 
+  color: #780000;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+.input-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.set-year-button {
+  margin-left: 10px;
+  background-color: #780000;
+  color: #fdf0d5;
+  /* Removes default button border */
+  border: none;
+  /* Adds padding around letters in button */
+  padding: 6px 12px; 
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  /* hover effect transition */
+  transition: all 0.3s ease-in-out;
+}
+
+.set-year-button:hover {
+  background-color: #a30000;
+  transform: scale(1.05);
+}
+
+.year-text{
+  font-size: 20px;
+  color: #fdf0d5;
+}
+
+.about {
+  display: block;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif
+  
+}
+
+.about h1 {
+  font-size: 40px;
+
+}
+
+.about p {
+  font-size: 20px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.rank {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 6px 10px;
+  border-radius: 50%;
+}
+
+.header-title {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.header-title:hover {
+  color: #a30000;
+}
